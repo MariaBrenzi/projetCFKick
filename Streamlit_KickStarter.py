@@ -15,7 +15,7 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import OneHotEncoder
+#from sklearn.preprocessing import OneHotEncoder
 #from imblearn.over_sampling import RandomOverSampler
 #from sklearn.compose import ColumnTransformer
 #from sklearn.impute import SimpleImputer
@@ -382,7 +382,7 @@ elif  page == pages[3]:
     num_train = num_train.reset_index(drop=True)
     num_test = num_test.reset_index(drop=True)
 
-    #from sklearn.preprocessing import OneHotEncoder
+    from sklearn.preprocessing import OneHotEncoder
 
     ohe = OneHotEncoder( drop="first", sparse=False)
 
