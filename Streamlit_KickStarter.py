@@ -143,7 +143,9 @@ elif page ==pages[1]:
     
     st.dataframe(df.dtypes)
     st.write("##### Aperçu statistique")
-    st.dataframe(df.describe())
+    dfstat = df[['id','backers_count','usd_pledged','creator_id','blurb_length','goal_usd','duration','year_launched','month_launched','year_deadline','month_deadline']]
+    st.dataframe(dfstat.describe())
+   # st.dataframe(df.describe())
 
 #***************************************************************************************************
 #***************************************************************************************************
