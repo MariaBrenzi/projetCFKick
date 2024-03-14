@@ -24,7 +24,7 @@ import plotly.express as px
 import joblib
 #from sklearn.metrics import f1_score
 
-df=pd.read_csv('Kickstarter Campaigns DataSet.csv')
+df=pd.read_csv('C:/Users/famil/ProjetKickStarter/Kickstarter Campaigns DataSet.csv')
 
 
 
@@ -386,7 +386,7 @@ elif  page == pages[3]:
 
     from sklearn.preprocessing import OneHotEncoder
 
-    ohe = OneHotEncoder( drop="first")
+    ohe = OneHotEncoder( drop="first", sparse_output=False)
 
     colcat=['country','category']
     cat_train = pd.DataFrame(ohe.fit_transform(cat_train[colcat])) 
