@@ -6,4 +6,5 @@ matplotlib
 plotly
 scikit-learn
 statsmodels
+import joblib
 shap
