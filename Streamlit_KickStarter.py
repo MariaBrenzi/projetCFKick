@@ -21,7 +21,7 @@ from sklearn.preprocessing import LabelEncoder
 #from sklearn.impute import SimpleImputer
 #from plotly.subplots import make_subplots
 import plotly.express as px
-import joblib
+#import joblib
 #from sklearn.metrics import f1_score
 
 df=pd.read_csv('Kickstarter Campaigns DataSet.csv')
