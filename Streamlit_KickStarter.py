@@ -386,7 +386,7 @@ elif  page == pages[3]:
 
     from sklearn.preprocessing import OneHotEncoder
 
-    ohe = OneHotEncoder( drop="first", sparse=False)
+    ohe = OneHotEncoder( drop="first")
 
     colcat=['country','category']
     cat_train = pd.DataFrame(ohe.fit_transform(cat_train[colcat])) 
