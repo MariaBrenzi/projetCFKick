@@ -342,7 +342,7 @@ elif page == pages[2]:
 
 elif  page == pages[3]:
     from sklearn.metrics import classification_report
-    import joblib
+#    import joblib
 #    from sklearn.metrics import confusion_matrix 
     st.title(" Modélisation")
     df_clean = pd.read_csv("df_Cleaning.csv")
