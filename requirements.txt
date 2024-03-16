@@ -4,7 +4,7 @@ streamlit
 seaborn
 matplotlib
 plotly
-scikit_learn
+scikit-learn
 statsmodels
 joblib
 shap
