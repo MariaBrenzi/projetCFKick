@@ -716,7 +716,7 @@ elif  page == pages[5]:
 st.sidebar.title('Auteur')
 
 # Ajout du lien LinkedIn
-st.sidebar.markdown('[Maria Brenzikofer(Sehgelmeble)](https://www.linkedin.com/in/mariabrenzikofer/)')
+st.sidebar.markdown('[Maria Brenzikofer](https://www.linkedin.com/in/mariabrenzikofer/)')
 
 
 
