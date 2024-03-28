@@ -327,9 +327,9 @@ elif page == pages[2]:
         color_sequence = [rgb_to_hex(color) for color in seaborn_palette]
 
 # Créer le graphique avec Plotly Express
-        fig5 = px.histogram(df_clean, x='duration', color='status', title='Nombre des Campagnes par nombre de jours selon le statut',
+        fig5 = px.histogram(df_clean, x='duration', color='status', title='Nombre des Campagnes par Duration selon le statut',
                    color_discrete_sequence=color_sequence)
-        fig5.update_layout(barmode='group', xaxis_title='Duration', yaxis_title='Nombre de Campagnes')
+        fig5.update_layout(barmode='group', xaxis_title='Duration(nombre des jours sur le site)', yaxis_title='Nombre de Campagnes')
         st.plotly_chart(fig5)
         st.write("La grande majorité des campagnes ont une durée de 30 jours. Cependant, lorsque la durée est étendue à 60 jours, le nombre de campagnes échouées dépassent nettement celui des campagnes réussies, au-delà de cette durée de 60 jours, la quantité des campagnes mises en œuvre diminue notablement.")
 
