@@ -41,7 +41,7 @@ page = st.sidebar.radio('allez vers la page', pages)
 #***************************************************************************************************
 
 if page == pages[0]:
-    st.title("Prediction du succès d'une campagne de financement participatif")
+    st.title("Prédiction du succès d'une campagne de financement participatif")
     st.write(" Contexte du Projet")
     st.write("Une campagne participative ou crowdfunding c’est un moyen de collecte de fonds en ligne pour soutenir le développement d’un projet, qu’il s’agisse de la création d’une entreprise, d’un documentaire, d’un film, etc.")
     st.write("Arrêtons-nous au plus grand succès du crowfunding « star citizen » un jeu vidéo avec 300 millions de dollar récolté ou la marque « Humble » avec une campagne réussi sur un smoothie protéiné. On peut se demander ce qui a fait le succès de leur campagne.")
@@ -59,12 +59,12 @@ if page == pages[0]:
 
 elif page ==pages[1]:
     st.title("  Exploration des données")
-    st.write("Le jeu de données utilisé a été obtenu grâce au webscraping de Kickstarter provenant de webro-bots.io ( https://webrobots.io/kickstarter-datasets/). Les données ont été combinées, prétraitées et mise à disposition dans un jeu de données contenant des projets(campagnes) de 2009 à 2020. Ce jeu de données est disponible sur le site https://www.kaggle.com/datasets/yashkantharia/kickstarter-campaigns-dataset-20")
+    st.write("Le jeu de données utilisé a été obtenu grâce au web scraping de Kickstarter provenant de webrobots.io ( https://webrobots.io/kickstarter-datasets/). Les données ont été combinées, prétraitées et mise à disposition dans un jeu de données contenant des projets(campagnes) de 2009 à 2020. Ce jeu de données est disponible sur le site https://www.kaggle.com/datasets/yashkantharia/kickstarter-campaigns-dataset-20")
     
     st.write("Aperçu des données")
     st.dataframe(df.head())
     
-    st.write("Dimensions initial du Dataframe:")
+    st.write("Dimension initiale du Dataframe:")
     st.write(df.shape)
     st.write("Type des données:")
     st.write(df.dtypes)
@@ -136,7 +136,7 @@ elif page ==pages[1]:
     st.write("Traitement fait au niveau des données:")
     st.write("• Élimination des doublons ")
     st.write("•	Changement du nom des colonnes : la colonne « sub_category » par « category » et « main_category » par « sub_category »")
-    st.write("•	Changement de type de colonnes : Le type des variables dates(str) ont été modifiés au type date, le type de la variable duration(float) a été modifié au type int")
+    st.write("•	Changement de type de colonnes : Le type des variables dates(str) a été modifié au type date, le type de la variable duration(float) a été modifié au type int")
     st.write("•	Création des colonnes : À partir des colonnes de type dates quatre nouvelles colonnes année et mois ont été créées")
     if st.checkbox("Nombre total des données après Nettoyage:"):
        st.write(len(df))
@@ -486,7 +486,7 @@ elif  page == pages[3]:
         ax.set_xlabel('Importance')
         ax.set_ylabel('Feature')
         st.pyplot(fig6)
-        st.image("TreeFIPourcentage.png")
+        #st.image("TreeFIPourcentage.png")
         st.write("constat:")
         st.write("Les variables 'backers_count' et 'goal_usd' émergent comme des éléments cruciaux dans la classification de notre arbre de décision. Le nombre de contributeurs (backers) s'avère particulièrement déterminant pour le succès d'une campagne. En outre, la variable 'goal_usd' se positionne en deuxième place en termes d'importance. Son influence est clairement perceptible dans la structure de l'arbre, contribuant à la formation de nœuds et de feuilles caractérisés par une classe majoritaire de 'Sucessful'.")
         st.write("backers_count et goal_usd ont determiné à 99%  le status d'une campagne, les autres variables influence seulement à 0.1%")
@@ -540,11 +540,11 @@ elif  page == pages[3]:
         ax.set_xlabel('Importance')
         ax.set_ylabel('Feature')
         st.pyplot(fig8)
-        st.write("consta: les variables 'backer_count' et 'goal_usd' semblent jouer un rôle significatif dans la sortie du modèle ")
+        st.write("constat: les variables 'backer_count' et 'goal_usd' semblent jouer un rôle significatif dans la sortie du modèle ")
         st.write("conclusion: Le modèle de Random Forest effectue de très bonnes prédictions mais le nombre de Faux Positif est encore élevé")
         
     elif model_choisi == 'Gradient Boosting Classifier':
-        st.write("Gradient Boosting: C'est un ensemble de «weak learners» (algorithmes de faible performance) créés les uns après les autres formant un « strong learner » (algorithme beaucoup plus efficace). Chaque « weak learner» est entraîné pour corriger les erreurs des «weak learners» précédents. La Particularité de Gradient Boosting réside dans sa tentative de prédire, à chaque étape, les résidus (écart entre la moyenne et la réalité). Les « weak learners » ont tous autant de poids dans le système de votation peu importe leur performance.")
+        st.write("Gradient Boosting: C'est un ensemble de «weak learners» (algorithmes de faible performance) créé les uns après les autres formant un « strong learner » (algorithme beaucoup plus efficace). Chaque « weak learner» est entraîné pour corriger les erreurs des «weak learners» précédents. La Particularité de Gradient Boosting réside dans sa tentative de prédire, à chaque étape, les résidus (écart entre la moyenne et la réalité). Les « weak learners » ont tous autant de poids dans le système de votation peu importe leur performance.")
         st.write(mp)
         st.write("{'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 250}")
         st.write(vs)
