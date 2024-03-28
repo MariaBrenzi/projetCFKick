@@ -44,8 +44,8 @@ if page == pages[0]:
     st.title("Prédiction du succès d'une campagne de financement participatif")
     st.write(" Contexte du Projet")
     st.write("Une campagne participative ou crowdfunding c’est un moyen de collecte de fonds en ligne pour soutenir le développement d’un projet, qu’il s’agisse de la création d’une entreprise, d’un documentaire, d’un film, etc.")
-    st.write("Arrêtons-nous au plus grand succès du crowfunding « star citizen » un jeu vidéo avec 300 millions de dollar récolté ou la marque « Humble » avec une campagne réussi sur un smoothie protéiné. On peut se demander ce qui a fait le succès de leur campagne.")
-    st.write("Le financement alternatif, tel que le crowfunding en ligne, est souvent plus attrayant qu’un prêt bancaire pour concrétiser une idée. Toutefois, la réalisation d’une campagne de crowdfunding est cruciale pour déterminer si un projet va décoller ou non.")
+    st.write("Arrêtons-nous au plus grand succès du crowdfunding « star citizen » un jeu vidéo avec 300 millions de dollar récolté ou la marque « Humble » avec une campagne réussi sur un smoothie protéiné. On peut se demander ce qui a fait le succès de leur campagne.")
+    st.write("Le financement alternatif, tel que le crowdfunding en ligne, est souvent plus attrayant qu’un prêt bancaire pour concrétiser une idée. Toutefois, la réalisation d’une campagne de crowdfunding est cruciale pour déterminer si un projet va décoller ou non.")
     st.write("L'objectif de ce projet est de comprendre les clés de la réussite d’une campagne de financement participatif, en classant les projets en réussite ou échec, puis en analysant les raisons potentielles de ces résultats.")
     st.write("Cela permettra de guider les créateurs dans la mise en place de leur campagne et de prendre des décisions éclairées concernant son lancement.")
     st.image("Crowfounding2.jpg")
@@ -327,7 +327,7 @@ elif page == pages[2]:
         color_sequence = [rgb_to_hex(color) for color in seaborn_palette]
 
 # Créer le graphique avec Plotly Express
-        fig5 = px.histogram(df_clean, x='duration', color='status', title='Nombre des Campagnes par  selon le statut',
+        fig5 = px.histogram(df_clean, x='duration', color='status', title='Nombre des Campagnes par nombre de jours selon le statut',
                    color_discrete_sequence=color_sequence)
         fig5.update_layout(barmode='group', xaxis_title='Duration', yaxis_title='Nombre de Campagnes')
         st.plotly_chart(fig5)
