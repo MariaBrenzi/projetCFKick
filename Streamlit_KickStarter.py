@@ -718,7 +718,10 @@ st.sidebar.title('Auteur')
 
 # Ajout du lien LinkedIn
 st.sidebar.markdown('[Maria Brenzikofer](https://www.linkedin.com/in/mariabrenzikofer/)')
-st.write("Ce travail et le code sont protégés par des droits d'auteur et ne sont pas destinés à être copiés ou redistribués sans autorisation.")
+
+st.sidebar.markdown("Ce travail et le code sont protégés par des droits d'auteur et ne sont pas destinés à être copiés ou redistribués sans autorisation.")
+
+#st.write("Ce travail et le code sont protégés par des droits d'auteur et ne sont pas destinés à être copiés ou redistribués sans autorisation.")
 
 
 
