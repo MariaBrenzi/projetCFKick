@@ -49,7 +49,7 @@ if page == pages[0]:
     st.write("L'objectif de ce projet est de comprendre les clés de la réussite d’une campagne de financement participatif, en classant les projets en réussite ou échec, puis en analysant les raisons potentielles de ces résultats.")
     st.write("Cela permettra de guider les créateurs dans la mise en place de leur campagne et de prendre des décisions éclairées concernant son lancement.")
     st.image("Crowfounding2.jpg")
-    st.write("Ce travail et le code sont protégés par des droits d'auteur et ne sont pas destinés à être copiés ou redistribués sans autorisation.")
+    
 
 #***************************************************************************************************
 #***************************************************************************************************
@@ -718,6 +718,7 @@ st.sidebar.title('Auteur')
 
 # Ajout du lien LinkedIn
 st.sidebar.markdown('[Maria Brenzikofer](https://www.linkedin.com/in/mariabrenzikofer/)')
+st.write("Ce travail et le code sont protégés par des droits d'auteur et ne sont pas destinés à être copiés ou redistribués sans autorisation.")
 
 
 
