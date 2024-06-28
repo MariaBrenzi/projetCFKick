@@ -22,7 +22,15 @@ from sklearn.preprocessing import LabelEncoder
 #from plotly.subplots import make_subplots
 import plotly.express as px
 import joblib
+import os
 #from sklearn.metrics import f1_score
+
+# Chemin vers le fichier CSS
+css_file_path = os.path.join(os.path.dirname(__file__), 'style.css')
+
+# Charger le fichier CSS
+with open(css_file_path) as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 df=pd.read_csv('Kickstarter Campaigns DataSet.csv')
 
